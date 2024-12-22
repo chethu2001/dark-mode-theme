@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <p id="h"></p>
+    <script>
+        let a = document.getElementById("a");
+        //function is a block of code its going to be excecuted when some one call it or invokes it
+        // function Name(){
+        //     let c = 100;
+        //     let b = 200;
+        //     a.innerHTML = c + b;
+
+        // } 
+        // Name();
+
+        // let j = Number(window.prompt("enter the number"));
+        // let h = Number(window.prompt("enter the number"));
+        // let i = Number(window.prompt("enter the number"));
+        // let k = Number(window.prompt("enter the number"));//to convert string to number we have many ways Number(string) is one of that
+        // j+
+        
+        // Cool(j,h,i,k);
+        let z = "   10 12";
+        console.log(typeof z);
+        console.log(typeof +z); //another method to convert string to number
+        console.log(typeof -z); //with the help of unary operators we can convert string into number
+        console.log(Number.parseInt(z));
+        console.log(Number.parseFloat(z));
+        console.log(Number(z));
+        console.log(parseInt(z));
+        console.log(parseFloat(z));
+
+
+
+        function Cool(l,b,c,d){
+            a.innerHTML = l + b + c + d;
+        }
+
+        //1.function will be excecute when someone invokes it means  if any event occurs like onclick,onchange
+        //2.function will be excecuted when code will be called in js
+        //3.auto invocation
+
+        (function New(){
+            let a = 300;
+            let b = 200;
+            console.log(a+b);
+
+        }())// auto invocation
+
+        let x = new1(12,343,55,657,65767,88);
+
+        function new1(...rest){//with the help of rest parameter we can pass multiple parametrs without using an array
+            let sum = 0;
+            for (let i of rest){
+                sum += i;
+ 
+            }
+            return sum;
+
+
+        }
+
+        
+        console.log(x);
+
+        let h1 = 1;
+
+
+        function count(){
+            document.getElementById("h").innerHTML = h1++;
+            
+            
+        }
+
+        count();
+        count();
+        count();
+
+
+
+
+    </script>
+</body>
+</html>

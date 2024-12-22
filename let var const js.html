@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 100; //to define variables we have 3 keywords in js 1.var 2.let 3.const
+        let b = 200; 
+        const c = 300;
+
+        // const a = 200;
+        // console.log(a)//we will get syntax err because we cant reassign and redclare variables with the help of const keyword
+        
+        // c = 500; // here we will get type err because we cant reassign the value of the variable which is defined with the help of const kw
+        // console.log(c);
+        
+        p = 800;
+        var p;
+        // console.log(p);//example for hoisting
+
+        // v = 300;
+        // let v;
+        //console.log(v );// we will get err because let is not hoisted
+
+        // const o;
+        // o = 300;//wrong way to declare variable using const kw
+        const l = 300;
+        // console.log(o);//we will get syntax err
+        console.log(l);//
+
+
+
+
+
+
+
+        //1.var keyword
+        //  var kw is used to support old browsers ,var has a global scope which means we can access the varibles defined with 
+        // the var kw anywhere in the document 
+        //1.var is gloabal scope kw
+        //2.var is hoisted
+        //3.declaration is possible
+        //4.redclaratin is also possible
+        //5.assigning is possible
+        //6.reassigning is also possible
+        //2.let keyword
+        //let is a block scope and function scope variable we cannot access the variables which are defined the help of let kw out side the function and outside the block
+        //1.let is not hoisted which means we cannot use the variables before the declaration but it was innitialized to the top not hoisted 
+        //2.declaration is possible
+        //3.redcalration is possible
+        //4.assigning is possible
+        //5.reassigning is not possible 
+        //6.its a function scope and block scope variable 
+        //3.const keyword
+        //const is a function scope variable 
+        //1.its not hoisted
+        //2.declaration is possible 
+        //3.redeclaration is not possible
+        //4.assigning values is possible 
+        //5.reassigning is not possible 
+        //6.its a function scope and block scope variable
+
+
+
+    </script>
+</body>
+</html>

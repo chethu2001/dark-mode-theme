@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="df"></h1>
+    <script>
+        const a = {
+            grapes : 200,
+            banana : 300,
+            orange : 500,
+            apple : 1000
+        }
+        const b = {};
+        Object.assign(b,a);
+        console.log(b);
+        const j = Object.create(a);
+        console.log(j);
+
+
+        const jo = [
+            {fruit:"orange",amount:400},
+            {fruit:"banana",amount:500},
+            {fruit:"apple",amount:800},
+            {fruit:"grapes",amount:1000}
+        ]
+        const ao = Object.groupBy(jo,({amount}) => amount > 500 ? "ok" : "low");
+        let text = "high value fruits: " + "<br>";
+        console.log(ao);
+        for (let [i,j] of ao.ok.entries()){
+            text += j.fruit + ":" + j.amount + "<br>";
+        }
+       
+        text += "<br>" + "low value fruits: " + "<br>";
+        for (let [i,j] of ao.low.entries()){
+            text += j.fruit + ":" + j.amount +"<br>";
+        }
+        document.getElementById("df").innerHTML = text;
+
+        // Object general Methods
+        //1.Object.assign(targetO,sourceO) - copying Object properties from source object to target object
+        //2.Object.create(object) - it creates a new object from already existing object
+        //3.Object.fromEntries(ObjectN) - from the list values and keys pair it will crate a new object
+        //4.Object.values(object) - it returns the array of object 
+        //5.Object.keys(object) - it returns the array of values of object
+        //6.Object.entries(object) - it returns the list of key , value pairs
+        //7.Object.groupBy(object,callbackfunction) - it will group the object elements according to the callback function
+
+
+
+        //Object protection methods
+        //1.Object.preventExtensions(object) - adding object properties will be prevent
+        //2.Object.isExtensible(object) - it returns true if the object is extesible 
+        //3.Object.freeze(object) - it prevents all changes to the object
+        //4.Object.isFrozen(object) - returns true if its frozen
+        //5.Object.seal(object) - it prevents adding and deleting object properties from the object
+        //6.Object.isSealed() - it returns true if it is sealed
+
+
+        //js methods can be devided into 3 types 1.general method 2.property management method 3.object protection method
+    </script>
+</body>
+</html>

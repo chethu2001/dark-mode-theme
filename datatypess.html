@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <script>
+        //data types: types of data data is nothing but information that information will be in several forms like numbers,characters,objects,symbols,undefined,bigint
+        //data TYPES
+        //1.Number 
+        //2.String
+        // 3.Boolean
+        // 4.Null 
+        // 5.symbols
+        // 6.undefined
+        // 7.bigint
+        // 8.object in object dt we have user defined and system defined objects
+        //inbuilt or system defined objects are Objects,Arrays,Maps,Sets,Intarray,FloatArray,Date,Promises
+
+        let a = 100;//Number datatype
+        console.log(typeof a);
+        let b = "string";//string datatype
+        console.log(typeof b);
+        let c = true;
+        console.log(c instanceof Boolean );
+        console.log(typeof c);//Boolean data type
+        let d = [1,2,3,4];
+        console.log(typeof d);//object data type
+        //to check whether its a array or not we have 2 ways
+        console.log(d instanceof Array);
+        let e = {
+            name:"chethan",
+            age:23,
+            gender:"male"
+
+        }
+        console.log(e);
+        // document.getElementById("a").innerHTML = e.age;//e[age] 
+        document.getElementById("a").innerHTML = e["age"];
+        let f = 122235655756757578n;
+        console.log(typeof f);//Bigint data type :numbers which are not possible to handle with the normal JS number those Numbers are stored as bigint data types
+        let g = new Date();//just Date() will also do the same thing
+        console.log(typeof g);
+        console.log(g instanceof Date); 
+        console.log(g);
+
+        
+
+    </script>
+</body>
+</html>

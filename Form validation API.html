@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="number" max="300" min="100" id="a">
+        <button onclick=myFun()>submit</button>
+        
+        <p id="b"></p>
+        <input type="number" name="" id="c" min="100" max="200">
+        <button onclick="mygoal()">click</button>
+        <div id="e">
+
+        </div>
+    </form>
+    <script>
+        
+        function myFun(){
+            let a = document.getElementById("a");
+            if(!a.checkValidity()){//checkValidity() and validitaionMessage 
+            document.getElementById("b").innerHTML = a.validationMessage;
+        }
+        else{
+            document.getElementById("b").innerHTML = "input ok";
+
+        }
+        }
+        //validity proerties
+        //rangeUnderFlow,rangeOverFlow,patternMismatch,tooLong,valueMissing,typeMismatch,stepMismatch,valid,customError
+        let r = documnet.getElementById('e');
+        let q = document.getElementById("c");
+        function mygoal(){
+            let text = "its ok"
+            if (q.validity.rangeOverFlow()){
+                 text += "too long";
+                 r.innerHTML = text;
+
+            }
+            else if(q.validity.rangeUnderFlow()){
+                text += "too short";
+                r.innerHTML = text;
+            }
+            else{
+                text += "its k"
+                r.innerHTML = text;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

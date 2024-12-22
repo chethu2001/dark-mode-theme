@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.a{
+          text-align:center;
+          margin-top:10%;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="a">
+        <img src="light-bulb-yellow-background.jpg" id="bulb" alt="bulb image" style="width:200px;height:200px;margin:auto;">
+        <br>
+        <div class="b">
+            <button id="a" style="margin-right:20px;padding:10px;background-color:aliceblue" onclick=bulbon()>Turn on</button>
+            <button id="b" style="margin-right:20px;padding:10px;background-color:aliceblue" onclick=bulboff()>Turn of</button>
+
+        </div>
+    
+    </div>
+    <script>
+        let a = document.getElementById("bulb");
+        let bulbon = () => {
+            a.src = "creative-yellow-light-bulb-symbol.jpg";
+        }
+        let bulboff =() => {
+            a.src = "light-bulb-yellow-background.jpg";
+        }
+
+
+    </script>
+
+</body>
+</html>

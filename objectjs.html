@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ways to create objects
+        //objects are nothing but anythings here we are storing data within the curlybrackets as name and value pairs
+       
+       //literal method
+        const a = {name:"chethan",age:23,
+            gender:"male"
+
+        }
+
+        //how to access object properties 
+        //ON.OP or ON["OP"]
+        console.log(a.name);
+        console.log(a["name"]);
+
+
+        //how to add properties to object
+        a.class = "BE";
+        console.log(a.class);
+        // how to delete the properties from the object
+        delete a["class"];
+        console.log(a["class"]);//here we will get udefined
+
+
+        console.log(a.gender);
+
+        //2 nd method
+        const b = {};
+        b.name = "chethan";
+        b.age = 23;
+        b.gender = "male";
+        console.log(b.gender);
+
+        //3rd method with new Object key word
+        const j = new Object();
+        j.name = "chethan";
+        console.log(j.name);
+
+        // 4th method object constructor function
+        function New(name,age,gender){//New is my objet constructor function when wwe want to create the objects of same of same type at that we can go with this
+
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.fullname = () => (this.name + this.age)
+              
+            
+        }
+
+        const a1 = new New("chethan",23,"male");//without new keyword its not possible to create a object from object constrctor function
+        // a1.name = "virat";
+        console.log(a1.name);//we can change the proprties and methods of the object
+        //but we cant change the properties and methos of the object constructor function without prototype kw
+        New.prototype.name1 = "father";
+        console.log(a1.name1);
+        console.log(a1.fullname());
+
+        //displaying object by name in HTML element we will get [object object]
+        //if we want to display object we can display the object properties by their name
+        console.log(a1.name,a1.age,a1.gender);
+        // by looping we can display the objects
+        for (let i in Object.entries(a1)){
+            console.log(a1[i]);
+        }  
+const n = {
+    a : 1,
+    b : 2,
+    c : 3,
+    "a" : 4,
+    b : 5,
+}
+n.a = 10;
+console.log(n)
+
+    
+
+    </script>
+</body>
+</html>

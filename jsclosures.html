@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="u"></h1>
+
+    <button onclick=ok()>click</button>
+    <script>
+        // let g = 1;
+        // function guu(){
+        //     document.getElementById("u").innerHTML = g++;
+
+        // }
+
+       let ok =  (function(){
+            let g = 0;
+            return function (){
+                document.getElementById("u").innerHTML = g ++;
+                
+            };
+          
+        })();//here iam using self invoked function with closures :closure means the child function cn access the parent function variables
+        
+        ok();
+       
+    </script>
+</body>
+</html>

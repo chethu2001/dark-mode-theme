@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <script>
+        let hj = document.getElementById("a");
+        //Arrays : Arrays are varibles used to store multiple values within the one variable .
+        // Arrays are zero indexed 
+        // arrays are nmber indexed where objects have  named indexes
+        let a =[12,13,14,15,16 ]; //array by literal method 
+        let b = new Array(1,13,14,15,16) ;//array by inbuilt new keyword method
+        // array accessing
+        console.log(a[0]);
+        console.log(a.at(0));
+
+        //array methods
+        console.log(a.concat(b));
+        console.log(a.length);
+        console.log(a.shift());
+        console.log(a.unshift(18));
+        console.log(a.join("+"));
+        console.log(a.toString());
+
+        let op = a.splice(4,2,"chethan");
+        console.log(a);
+        
+        console.log(a);
+        hj.innerHTML = a;
+
+        console.log(a.sort());
+        console.log(a.reverse());
+        console.log(a.toReversed());
+        console.log(a.toSorted());
+        console.log(Math.min(12,34,56));
+        console.log(Math.min.apply("null",[12,34,56]));
+        console.log(Math.max(23,45,33));
+
+        //Numeric sort
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

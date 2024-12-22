@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //strings: strings are used for storing text
+        //strings are written inside single quotes or double quotes
+        //template string : it was introduced in ES6 ,strings are written inside backticks
+        //template strings allow you to use both single quotes and double quotes inside the string
+        //string interpolation : we can easily interpolate varibles and expressions inside the string
+        //
+        
+        let a = "text";
+        let b = 'text';
+        let c = `text ${10*20} ${a}`; //we can write expressions and vaibles inside the template strings
+        console.log(c);
+        let a1 = "chethan" + 100; //when you are adding string and a number JS treats number as a string
+        let a2 = "10" + null;
+        console.log(a2);
+
+        //string methods
+        let strings = "12 chethan chethan";
+        console.log(strings.length);//1. string.length  - to findout the length of the string 
+        console.log(strings.at(0));//2.to access the string we have 4 methods string.at();
+        console.log(strings.charAt(0));//3.
+        console.log(strings.charCodeAt(0));//4.
+        console.log(strings[0])//5.
+
+
+        console.log(strings.toUpperCase()); // 6.
+        console.log(strings.toLowerCase());// 7.
+
+        console.log()
+
+
+
+        console.log(strings.search(/[0-9]/gi));
+
+        console.log(strings.indexOf("chet",7));
+        console.log(strings.lastIndexOf("chet"));
+        console.log(strings.search("chethan"));
+        console.log(strings.includes("chetha"));
+        console.log(strings.repeat(3));
+        console.log(strings.padStart(5,'c'));
+        console.log(strings.padEnd(5,"c"));
+        console.log(strings.trim());
+        console.log(strings.trimStart());
+        console.log(strings.trimEnd());
+        console.log(strings.replaceAll(/chethan/gi,"virat"));
+        let r = new Number(123);
+        console.log(typeof r);
+        let q = r.valueOf(r);
+        console.log(typeof q);
+
+
+    </script>
+    
+</body>
+</html>

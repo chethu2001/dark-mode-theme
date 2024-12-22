@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        h1{
+            width:200px;
+            height:200px;
+            border:1px solid black;
+            border-radius: 20px;
+            padding-top:70px;
+            text-align:center;
+            background-color:azure;
+
+
+        }
+        div.a{ 
+            width:100%;
+            transform: translate(50%,50%);
+
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <h1 id="c">hii hello</h1>
+        <button id="b" value="click" onclick=color() style="padding:10px;margin-top:30px;text-align:center;position:absolute;left:30px;">
+            click
+
+        </button>
+        <button id="b" value="click" onclick=coloroff() style="padding:10px;margin-top:30px;text-align:center;position:absolute;left:100px;">
+            clickoff
+
+        </button>
+        
+    </div>
+    <script>
+        let a = document.getElementById("c");
+        let color = () => {
+            a.style.backgroundColor = "red";
+        }
+        let coloroff = () => {
+            a.style.backgroundColor = "aliceblue";
+        }
+        
+
+
+    </script>
+</body>
+</html>
